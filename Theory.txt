@@ -1,0 +1,77 @@
+Factory:
+Creational design pattern
+Used when we have one super class and based on the condition  we want to return one class instance
+provides abstraction bewteen implementation and client classes
+remove instantiation of class from client code
+ 
+ Super class can be a interface abstract class or basic java class
+ factory class has a static method which returns the instance of sub class based on input
+
+Builder:
+Creational design pattern
+Used when we have too many arguments to pass to constructor and its hard to maintain order
+when we dont want to send all the paramters in object initialisation
+
+we create static nested class which contains all the arguments of outer class
+if class name is vehicle builder should be VehicleBuilder
+Builder class have public constructor with all required paramters
+Builder class should have methods for optional paramters. Method will return the builder object
+build method which will return the final object
+Vehicle class should have private constructor so to create instance from builder class
+main vehicle class only have getters
+
+
+Prototype:
+
+Creational design pattern
+Used when we want to avoid multiple object creation of same instance,instead you copy the object to new object and than we modify as per our need
+object which we are copying should provide copying feature by implementing cloneable interface
+we can override clone() method to implement as per our need
+
+
+Proxy:
+Structural design pattern
+used when you want to control the access i.e in databases you want to control the delete query only for admin
+
+In general we ahve class which is executing interface executor method which is executing all commands
+TO control this we add proxy class which implements same interface and write the conditions for admin user before proceeding to actual executor
+
+
+
+Facade:
+Structural design pattern
+Used when there multiple interfaces of similar kind of jobs then we add facade interface,which provide better interface to these interfaces and clients.
+It basically help in routng to related interface i.e. driver,databases
+Well implement facade helper class,which will route to method related to specific class based on input
+
+
+Composite Design pattern
+Structural design pattern
+Composite lets client treat individual objects(leaf) and compositions of object (Composite) uniformly
+Four Participants : Component,Leaf,Composite,client
+
+If object is leaf node,request is handled directly,if object is composite,it forward
+request to child ,so some operation and combine operations
+
+Decorator
+Structural design pattern
+Used when we want to modify the functionality of object at run time 
+and it should not change individual object functionality
+Adding diff functionality in dress
+
+Adapter
+Structural design pattern
+When objects offering same features ,but has different interface i.e. charging adapter,
+usb to ethernet adapter
+It allows existing classes to be used with others without modifying their source code
+i.e. web driver adapter
+
+Bridge:
+Structural design pattern
+Used when we have hierarchies in both interfaces as well as implementations and we want to hide the implementatoon
+from client
+It decouple abstraction from it implementation
+
+Generally weve remote which works differently for sony and philips tv but we can have different remote as well
+oldRemote and newRemote,which have diff methods for each tv
+i.e. tv and remote implemenation
